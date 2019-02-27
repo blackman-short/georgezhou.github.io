@@ -1,0 +1,61 @@
+body, html {
+  height: 100%;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#share-img {
+  min-height: 650px;
+  overflow: auto;
+  width: 370px;
+  background-color: #ffffff
+}
+
+.top-img {
+  height: 230px;
+  width: 100%
+}
+
+.top-img>img {
+  width: 100%;
+  height: 100%
+}
+
+.keyword-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.keyword-rate>p:first-child {
+  color: #006CDB;
+  font-size: 50px;
+}
+.keyword-rate>p:last-child {
+  font-size: 40px;
+  color: #FFD700;
+  line-height: 25px;
+}
+
+.teacher-evaluation {
+  margin: 2px 0;
+}
+.teacher-evaluation>p {
+  color:#006CDB;
+  line-height: 30px;
+}
+.teacher-evaluation>p:last-child{
+  text-indent: 30px;
+}
+
+.logo-QRCode>img{
+  width:40px;
+}
+
