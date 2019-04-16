@@ -64,6 +64,13 @@ img {
   justify-content: center;
 }
 
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .rec-prefix-icon {
   width: .125rem;
   height: 100%;
