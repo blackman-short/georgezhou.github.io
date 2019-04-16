@@ -1,61 +1,320 @@
-body, html {
+/* 基础样式 */
+html,
+body {
   height: 100%;
-  background-color: #cccccc;
-  display: flex;
-  justify-content: center;
-  align-items: center
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
 }
 
-#share-img {
-  min-height: 650px;
+li {
+  list-style: none;
+}
+
+/* img */
+img {
+  width: 100%;
+}
+
+.img-w-72 {
+  width: 4.5rem
+}
+
+.container-100 {
+  height: 100%;
+  width: 100%;
   overflow: auto;
-  width: 370px;
-  background-color: #ffffff
 }
 
-.top-img {
-  height: 230px;
+.width-100 {
   width: 100%
 }
 
-.top-img>img {
+.page-container {
+  height: 97%;
   width: 100%;
-  height: 100%
+  padding-top: 5%;
+  overflow: auto;
 }
 
-.keyword-rate {
+#copyright {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #999;
+  font-size: x-small;
+}
+
+.two-space {
+  text-indent: 2rem
+}
+
+.ul-flex {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center
+}
+
+.flex-center {
+  display: flex;
   align-items: center;
-  font-size: 30px;
-}
-.keyword-rate>p:first-child {
-  color: #006CDB;
-  font-size: 50px;
-}
-.keyword-rate>p:last-child {
-  font-size: 40px;
-  color: #FFD700;
-  line-height: 25px;
+  justify-content: center;
 }
 
-.teacher-evaluation {
-  margin: 2px 0;
-}
-.teacher-evaluation>p {
-  color:#006CDB;
-  line-height: 30px;
-}
-.teacher-evaluation>p:last-child{
-  text-indent: 30px;
+.rec-prefix-icon {
+  width: .125rem;
+  height: 100%;
 }
 
-.logo-QRCode>img{
-  width:40px;
+.line {
+  display: inline-block;
+  height: .0625rem;
+  width: 30%;
 }
 
+/* font-size */
+.font-size-xsmall {
+  font-size: x-small
+}
+
+.font-size-small {
+  font-size: small;
+}
+
+.font-size-smaller {
+  font-size: smaller
+}
+
+.font-size-15 {
+  font-size: .9375rem
+    /* 15/16 */
+}
+
+.font-size-16 {
+  font-size: 1rem
+}
+
+.font-size-20 {
+  font-size: 1.25rem
+}
+
+.font-size-24 {
+  font-size: 1.5rem
+}
+
+.font-size-32 {
+  font-size: 2rem;
+  font-weight: bold
+}
+
+.font-size-48 {
+  font-size: 3rem;
+  font-weight: bold
+}
+
+.font-size-56 {
+  font-size: 3.5rem;
+}
+
+.font-bold {
+  font-weight: bold
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.font-inital {
+  font-family: initial
+}
+
+/* padding */
+.padding-16 {
+  padding: 1rem
+}
+
+.padding-r-l-16 {
+  padding: 0 1rem
+}
+
+.padding-t-b-8 {
+  padding: .5rem 0
+}
+
+.padding-t-b-16 {
+  padding: 1rem 0;
+}
+
+.padding-top-8 {
+  padding-top: .5rem
+}
+
+.padding-top-16 {
+  padding-top: 1rem
+}
+
+.padding-top-48 {
+  padding-top: 3rem;
+}
+
+.padding-8 {
+  padding: .5rem
+}
+
+.padding-4-2 {
+  padding: .125rem .125rem
+}
+
+.padding-8-2 {
+  padding: .125rem .5rem
+}
+
+.padding-0-4 {
+  padding: 0 .25rem
+}
+
+.padding-2-16 {
+  padding: .125rem 1rem
+}
+
+.padding-16-8 {
+  padding: 1rem .5rem
+}
+/* margin */
+.margin-l-r-auto {
+  margin: 0 auto;
+}
+
+.margin-top-4 {
+  margin-top: .25rem
+}
+
+.margin-top-8 {
+  margin-top: .5rem
+}
+
+.margin-right-8 {
+  margin-right: .5rem
+}
+
+.margin-8-16 {
+  margin: .5rem 1rem;
+}
+
+.margin-top-16 {
+  margin-top: 1rem;
+}
+
+.margin-top-32 {
+  margin-top: 2rem;
+}
+
+.margin-l-r-10 {
+  margin: 0 .625rem
+}
+
+.margin-l-r-16 {
+  margin: 0 1rem
+}
+
+.margin-16 {
+  margin: 1rem
+}
+
+.margin-bottom-8 {
+  margin-bottom: .5rem
+}
+
+.margin-bottom-16 {
+  margin-bottom: 1rem
+}
+
+/* border */
+.border-1 {
+  border: .06125rem solid
+}
+
+.border-2 {
+  border: .125rem solid
+}
+
+.border-radius-4 {
+  border-radius: .25rem
+}
+
+.border-radius-8 {
+  border-radius: .5rem
+}
+
+.boder-radius-16 {
+  border-radius: 1rem
+}
+
+.border-radius-round {
+  border-radius: 50%;
+}
+
+.border-bottom {
+  border-bottom: .0625rem solid;
+}
+
+/* text overflow */
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-overflow-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+/* line-height */
+.line-height-24 {
+  line-height: 1.5rem
+}
+
+.line-height-28 {
+  line-height: 1.75rem /* 28/16 */
+}
+
+.line-height-32 {
+  line-height: 2rem
+}
+
+/* z-index */
+.z-index-2 {
+  z-index: 2
+}
+
+.z-index-500 {
+  z-index: 500
+}
+
+/* box-shadow */
+.box-shadow-6d59b3 {
+  box-shadow: .25rem .25rem .06125rem #6d59b3
+}
+
+.box-shadow-eebc1c {
+  box-shadow: 0 -.25rem .06125rem #eebc1c
+}
+
+/* echart container */
+.echart-container {
+  width: 95%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+
+/* z-index */
+.z-index--1 {
+  z-index: -1
+}
