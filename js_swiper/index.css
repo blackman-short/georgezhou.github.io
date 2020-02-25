@@ -1,18 +1,4 @@
-body, ul {
-  margin: 0
-}
-
-ul {
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  display: block;
-}
+@import '../common/common.css';
 
 .content {
   position: relative;
