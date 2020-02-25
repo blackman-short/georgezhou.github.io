@@ -4,6 +4,7 @@ var LRC = {
 
 var voiceLineW = 7
 
+// 转化歌词：[时间：歌词]
 function parseLyric(text) {
   //将文本分隔成一行一行，存入数组
   var lines = text.split('\n'),
@@ -38,9 +39,8 @@ function parseLyric(text) {
 }
 
 window.onload = () => {
-  var meetUWordList = parseLyric(LRC.meetU)
-  console.log(meetUWordList)
-
+  // 判断屏幕是否是竖屏
+  var mql = window.matchMedia("(orientation: portrait)");
 
   // 获取播放源
   var audio = document.querySelector('audio')
@@ -54,8 +54,15 @@ window.onload = () => {
   var canvas = document.getElementById('g_canvas');
   var dWidth = window.innerWidth
   var dHeight = window.innerHeight
-  canvas.width = dWidth;
-  canvas.height = dHeight;
+
+  if (mql.matches) {
+    canvas.width = dHeight;
+    canvas.height = dWidth;
+  } else {
+    canvas.width = dWidth;
+    canvas.height = dHeight;
+  }
+
   // 渐变背景
   canvas.style.background = 'linear-gradient(135deg , #7A88FF, #7AFFAF)'
   var cvsCtx = canvas.getContext('2d');
@@ -76,6 +83,8 @@ window.onload = () => {
   setInterval(draw, 10)
   audio.play()
 
+  // 获取歌词列表
+  var meetUWordList = parseLyric(LRC.meetU)
   // 展示歌词
   var lyricContainer = document.getElementById('lyricContainer');
   //监听ontimeupdate事件
