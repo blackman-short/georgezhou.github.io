@@ -43,7 +43,7 @@ html, body {
   position: absolute;
   top: 35px;
   left: 15%;
-  font-size: 20px;
+  font-size: 2rem;
   background-image: linear-gradient(to left , rgb(60, 70, 163), rgb(22, 187, 88));
   -webkit-background-clip: text; 
   -webkit-text-fill-color:transparent; 
