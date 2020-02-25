@@ -39,9 +39,6 @@ function parseLyric(text) {
 }
 
 window.onload = () => {
-  // 判断屏幕是否是竖屏
-  var mql = window.matchMedia("(orientation: portrait)");
-
   // 获取播放源
   var audio = document.querySelector('audio')
   var audioCtx = new AudioContext()
@@ -55,7 +52,7 @@ window.onload = () => {
   var dWidth = window.innerWidth
   var dHeight = window.innerHeight
 
-  if (mql.matches) {
+  if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
     canvas.width = dHeight;
     canvas.height = dWidth;
   } else {
