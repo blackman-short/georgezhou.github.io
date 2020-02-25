@@ -1,0 +1,65 @@
+body, ul {
+  margin: 0
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  /* background-color: yellow; */
+}
+
+.swiper ul {
+  width: 600vw;
+  height: 60vh;
+  transform: translateZ(0);
+}
+
+.swiper li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 100vw;
+  height: 60vh;
+  /* background-color: green; */
+}
+
+.swiper ul li img {
+  width: 80%;
+  border-radius: 2vw;
+}
