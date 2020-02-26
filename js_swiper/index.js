@@ -11,9 +11,10 @@ window.onload = function() {
     oSwiper: document.querySelector('.swiper'),
     bgImg: document.getElementById('swiperBgImg'),
     imgSrcList: imgSrcList,
-    time: '0.3s'
+    duration: '0.3s'
   }
 
+  // 执行封装函数
   swiper(data)
 
   function swiper (data) {
@@ -37,7 +38,6 @@ window.onload = function() {
         case 'touchmove':
           var x2 = ev.changedTouches[0].clientX
           var nowX = startX + x2 - x1
-          data.oUl.translateX = nowX
           cssTransform(data.oUl, 'translateX', nowX)
           break;
         case 'touchend':
@@ -45,7 +45,7 @@ window.onload = function() {
           offset = Math.min(offset, 0)
           offset = Math.max(-data.aLi[0].offsetWidth * (data.aLi.length - 1), offset)
   
-          data.oUl.style.transition = data.time
+          data.oUl.style.transition = data.duration
           var moveNum = Math.round(offset / data.aLi[0].offsetWidth)
           cssTransform(data.oUl, 'translateX', moveNum * data.aLi[0].offsetWidth)
           changeBgImg(-moveNum)
