@@ -31,7 +31,7 @@ window.onload = function() {
       switch (ev.type) {
         case 'touchstart':
           x1 = ev.changedTouches[0].clientX
-          data.oUl.style.transition = '0'
+          data.oUl.style.transition = '0s'
           startX = cssTransform(data.oUl, 'translateX')
           break;
         case 'touchmove':
