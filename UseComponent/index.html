@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="../common.css">
+  <script src="./index.js"></script>
+  <title>悬浮图片</title>
+</head>
+<body>
+  <!-- 图片 -->
+  <div id="gHoverImg">
+    <div>
+      <img src="./images/1.jpg" alt="" class="hoverImg">
+    </div>
+    <div>
+      <img src="./images/2.jpg" alt="" class="hoverImg">
+    </div>
+    <div>
+      <img src="./images/3.jpg" alt="" class="hoverImg">
+    </div>
+  </div>
+
+  <!-- 图片 -->
+  <div id="gHoverImg2">
+    <ul>
+      <li>
+        <img src="./images/pc_1.png" alt="">
+        <p>互联网金融</p>
+      </li>
+      <li>
+        <img src="./images/pc_2.png" alt="">
+        <p>电子商务</p>
+      </li>
+      <li>
+        <img src="./images/pc_3.png" alt="">
+        <p>品牌零售</p>
+      </li>
+      <li>
+        <img src="./images/pc_4.png" alt="">
+        <p>证券</p>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- 按钮 -->
+  <div class="content">
+    <!-- 
+      mouseleave, mouseenter 不支持事件冒泡;
+      mouseover, mouseout 支持事件冒泡. => 当该元素还有子元素时, 从该元素 移动 到 子元素, 也会触发mouseout事件
+      利用relatedTarget属性和contains, 判断鼠标是否在元素内部移动，如果是则返回
+     -->
+
+    <!-- 事件冒泡 -->
+   <div id="gHoverBtn">
+    <p class="btn1" onmouseout="btn1BlurOut(event)">
+      <span style="width: 40px;" title="反馈" onmouseover="btn1BlurOver()">
+        <img style="width: 27px; margin: 0 auto" src="./images/message.png" alt="" srcset="">
+      </span>
+      <span class="extra" title="反馈">反馈</span>
+    </p>
+
+    <p class="btn1_1" onmouseout="btn1BlurOut_1(event)">
+      <span style="width: 40px;" title="喜欢" onmouseover="btn1BlurOver_1()">
+        <img style="width: 27px; margin: 0 auto" src="./images/like.png" alt="" srcset="">
+      </span>
+      <span class="extra" title="喜欢" style="color: #ff5c63">喜欢</span>
+    </p>
+   </div>
+
+    <!-- 事件不冒泡 -->
+    <!-- <p class="btn1" onmouseleave="btn1BlurOut(event)">
+      <span style="width: 40px;" title="反馈" onmouseenter="btn1BlurOver()">
+        <img style="width: 27px; margin: 0 auto" src="./images/message.png" alt="" srcset="">
+      </span>
+      <span class="extra" title="反馈">反馈</span>
+    </p> -->
+
+    <div class="btn2">
+      <p onclick="activeBtn2(event)">全部分类</p>
+      <p onclick="activeBtn2(event)">生活 • 健康</p>
+      <p onclick="activeBtn2(event)">娱乐 • 播客</p>
+      <p onclick="activeBtn2(event)">技术 • 开发</p>
+      <p onclick="activeBtn2(event)">漫画 • 插画</p>
+      <p onclick="activeBtn2(event)">资源 • 学习</p>
+    </div>
+
+    <div class="btnSearch">
+      <p class="show">
+  
+      </p>
+      <p class="input">
+        <input type="text" />
+      </p>
+    </div>
+
+    <!-- transition & transform -->
+    <div class="rotateBox"></div>
+
+    <!-- 下拉收缩框 -->
+    <div class="contractionBox">
+      <ul>
+        <li>
+          <p class="title">神策图书馆是什么？</p>
+          <p class="detail">神策图书馆是开放的内容共享平台，凝结全体神策人的智慧结晶，为数据从业者提供包括产品应用、行业研究、业务场景分析、技术剖析等丰富的内容，致力于构建完整的数据分析体系，帮助你提升数据思维能力，落地数据价值。</p>
+        </li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!-- css 伪元素 before, after -->
+    <div class="weiElement">
+      <p>ello， World</p>
+
+      <div class="star-five"></div>
+
+    </div>
+  </div>
+
+</body>
+</html>

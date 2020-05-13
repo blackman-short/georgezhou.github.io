@@ -1,0 +1,35 @@
+html,body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0
+}
+
+img {
+  width: 100%;
+  display: block
+}
+
+/*滚动条*/
+::-webkit-scrollbar{
+  display: none;
+  width:1px;
+  height:4px;
+}
+::-webkit-scrollbar-track{
+  background: #f6f6f6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb{
+  background: #aaa;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #747474;
+}
+::-webkit-scrollbar-corner{
+  background: #f6f6f6;
+}
