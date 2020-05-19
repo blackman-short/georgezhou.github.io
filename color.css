@@ -17,6 +17,11 @@
   box-shadow: 0 1px 7px 4px #ecf0f5;
 }
 
+.order_round_shadow {
+  border: .013333rem solid rgba(237,240,247,.7);
+  box-shadow: 0 0.08rem 0.4rem 0 rgba(206,223,241,.4);
+}
+
 .xdf_green {
   color: #00896C
 }
