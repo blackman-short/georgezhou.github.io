@@ -176,9 +176,8 @@ var app = new Vue({
 
             axios.post('https://jinshuju.net/graphql/f/uEQB9T', JSON.stringify(testData), {
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS'
+                    'Content-Type': 'application/json;charset=UTF-8',
+                    'accept': '*/*'
                 }
             }).then((res) => {
                 console.log(res);
