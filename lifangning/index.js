@@ -122,7 +122,25 @@ var app = new Vue({
             }
         },
 
-        async doRequest() {
+        postData(url, data) {
+            // Default options are marked with *
+            return fetch(url, {
+              body: JSON.stringify(data), // must match 'Content-Type' header
+              cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+              credentials: 'same-origin', // include, same-origin, *omit
+              headers: {
+                'user-agent': 'Mozilla/4.0 MDN Example',
+                'content-type': 'application/json'
+              },
+              method: 'POST', // *GET, POST, PUT, DELETE, etc.
+              mode: 'cors', // no-cors, cors, *same-origin
+              redirect: 'follow', // manual, *follow, error
+              referrer: 'no-referrer', // *client, no-referrer
+            })
+            .then(response => response.json()) // parses response to JSON
+          },
+
+        doRequest() {
             const data = {
                 "operationName": "CreatePublishedFormEntry",
                 "variables": {
@@ -174,16 +192,24 @@ var app = new Vue({
 
             const testData = {"operationName":"CreatePublishedFormEntry","variables":{"input":{"formId":"uEQB9T","entryAttributes":{"field_3":"5eVi","field_1":[{"api_code":"pvGu","scheduled_at":"2021-07-25T09:00:00+08:00","end_at":"2021-07-25T12:00:00+08:00","number":1}],"field_2":"daniel zhou","field_4":"234@qq.com","field_6":"少儿英语老师"},"captchaData":null,"weixinAccessToken":null,"xFieldWeixinOpenid":null,"weixinInfo":null,"prefilledParams":"","embedded":false,"internal":false,"backgroundImage":false,"formMargin":false,"hasPreferential":false,"fillingDuration":174.264,"forceSubmit":false}},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"efc2acc4016c37a69da13ffda3d86f5d44d71748f01fc53844ce0f1a3c03d489"}}}
 
-            axios.post('https://jinshuju.net/graphql/f/uEQB9T', JSON.stringify(testData), {
-                headers: {
-                    'Content-Type': 'application/json;charset=UTF-8',
-                    'accept': '*/*'
-                }
-            }).then((res) => {
-                console.log(res);
-            }).catch((error) => {
-                console.error(error);
-            });
+            // axios.post('https://jinshuju.net/graphql/f/uEQB9T', JSON.stringify(testData), {
+            //     headers: {
+            //         'Content-Type': 'application/json;charset=UTF-8',
+            //         'accept': '*/*'
+            //     }
+            // }).then((res) => {
+            //     console.log(res);
+            // }).catch((error) => {
+            //     console.error(error);
+            // });
+
+            this.postData('https://jinshuju.net/graphql/f/uEQB9T', testData)
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
+            console.log('=======================')
+            this.postData('http://example.com/answer', {answer: 42})
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
         }
     },
 
