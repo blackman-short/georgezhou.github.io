@@ -1,0 +1,44 @@
+html {
+    --ea-height: 60px;
+    --ea-font-size-header: 20px;
+    --ea-font-size-body: 18px;
+}
+
+.el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    font-size: var(--ea-font-size-header);
+    letter-spacing: 10px;
+    line-height: var(--ea-height);
+    text-align: center;
+}
+
+.el-aside, .el-main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    height: calc(100vh - 1.5 * var(--ea-height));
+    text-align: center;
+}
+
+.el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    height: calc(100vh - 1.5 * var(--ea-height));
+    text-align: center;
+}
+
+.ea-request-time .title1 {
+    font-size: var(--ea-font-size-body);
+}
+
+.ea-request-time .title2 {
+    font-size: calc(var(--ea-font-size-header) * 1.5);
+    letter-spacing: 2px;
+}
