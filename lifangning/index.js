@@ -203,13 +203,15 @@ var app = new Vue({
             //     console.error(error);
             // });
 
+            console.log('==============')
+            this.postData('http://example.com/answer', {answer: 42})
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
+
             this.postData('https://jinshuju.net/graphql/f/uEQB9T', testData)
             .then(data => console.log(data))
             .catch(error => console.error(error))
             console.log('=======================')
-            this.postData('http://example.com/answer', {answer: 42})
-            .then(data => console.log(data))
-            .catch(error => console.error(error))
         }
     },
 
